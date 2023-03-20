@@ -1,0 +1,125 @@
+:root {
+    --star-color: #aaa;
+    --star-background: #fc0;
+    --rating: 0;
+}
+
+.stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    display: inline-block;
+    line-height: 1;
+}
+
+.stars::before {
+    content: "★★★★★";
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.product-card {
+    margin: 3px;
+    padding: 5px;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card:hover {
+    box-shadow: 2px 1px 5px 0 #6D6D6D;
+}
+
+.product-card .title {
+    width: 95%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card .image {
+    margin: 10px 5px;
+    max-width: 100%;
+    max-height: 180px
+}
+
+.product-card .image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-card .body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product-card .description {
+    width: 100%;
+    text-align: left;
+    margin: 20px 10% 20px 10%;
+}
+
+.product-card .rating {
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.product-card .price {
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.app-pagination {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.category-list ul {
+    padding-left: 0;
+}
+
+.category-list li {
+    list-style-type: none;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.category-list a {
+    text-decoration: none;
+    color: black;
+}
+.category-list li.active {
+    font-weight: bold;
+}
+
+.category-list li:hover {
+    box-shadow: 1px 1px 10px #6D6D6D;
+}
+
+.search-input {
+    /*padding: 0.5rem 1rem;*/
+    font-size: 1rem;
+}
+
+.search-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}

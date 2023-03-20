@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryList renders 1`] = `
+<div
+  className="category-list"
+>
+  <ul>
+    <a
+      href="/category/"
+      onClick={[Function]}
+    >
+      <li
+        className=""
+      >
+        All categories
+      </li>
+    </a>
+  </ul>
+</div>
+`;

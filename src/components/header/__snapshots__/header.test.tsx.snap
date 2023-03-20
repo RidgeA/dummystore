@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-light bg-light"
+>
+  <div
+    className="container-fluid"
+  >
+    <span
+      className="navbar-brand"
+    >
+      My Title
+    </span>
+    <div
+      aria-expanded={null}
+      className="navbar-collapse collapse"
+    >
+      <div
+        className="ma-auto navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <span
+          className="nav-link"
+          data-rr-ui-event-key={null}
+          disabled={false}
+          onClick={[Function]}
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Catalog
+          </a>
+        </span>
+        <span
+          className="nav-link"
+          data-rr-ui-event-key={null}
+          disabled={false}
+          onClick={[Function]}
+        >
+          <a
+            href="/order"
+            onClick={[Function]}
+          >
+            Order & delivery
+          </a>
+        </span>
+        <span
+          className="nav-link"
+          data-rr-ui-event-key={null}
+          disabled={false}
+          onClick={[Function]}
+        >
+          <a
+            href="/about"
+            onClick={[Function]}
+          >
+            About Us
+          </a>
+        </span>
+      </div>
+    </div>
+    <form
+      className=""
+      onSubmit={[Function]}
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="search-input form-control"
+          onChange={[Function]}
+          placeholder="Search"
+          type="text"
+          value=""
+        />
+        <button
+          className="btn btn-primary search-button"
+          type="submit"
+        >
+          🔍
+        </button>
+      </div>
+    </form>
+  </div>
+</nav>
+`;

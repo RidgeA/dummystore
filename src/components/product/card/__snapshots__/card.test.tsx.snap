@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard renders 1`] = `
+<div
+  style={
+    {
+      "flex": "0 0 33.333333%",
+      "maxWidth": "33.333333%",
+    }
+  }
+>
+  <a
+    href="/product/1"
+    onClick={[Function]}
+  >
+    <div
+      className="product-card"
+    >
+      <div
+        className="title"
+      >
+        title
+      </div>
+      <div
+        className="image"
+      >
+        <img
+          alt="title"
+          src=""
+        />
+      </div>
+      <div
+        className="body"
+      >
+        <div
+          className="description"
+        >
+          description
+        </div>
+        <div
+          className="rating"
+        >
+          <div
+            className="stars"
+            style={
+              {
+                "--rating": 4,
+              }
+            }
+          />
+        </div>
+        <p
+          className="price"
+        >
+          $
+          100
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+`;

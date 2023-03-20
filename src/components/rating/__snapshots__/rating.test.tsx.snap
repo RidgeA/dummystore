@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating renders 1`] = `
+<div
+  className="stars"
+  style={
+    {
+      "--rating": 1,
+    }
+  }
+/>
+`;
