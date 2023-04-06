@@ -1,4 +1,5 @@
-import {createAsyncThunk, createSlice, Draft} from "@reduxjs/toolkit";
+import type {Draft} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {RootState} from "./store";
 
 export interface Product {
@@ -52,10 +53,7 @@ export const productsSlice = createSlice({
 
             .addCase(loadProductById.pending, loadingReducer)
             .addCase(loadProductById.rejected, errorReducer)
-            .addCase(loadProductById.fulfilled, (state, action) => {
-                state.status = "succeeded"
-                state.product = action.payload
-            })
+            .addCase(loadProductById.fulfilled, successReducerSingleProduct)
     }
 })
 
@@ -77,13 +75,20 @@ const successReducer = (state: Draft<ProductsState>, action: any) => {
     state.page.current = (skip / limit) + 1
 }
 
+const successReducerSingleProduct = (state: Draft<ProductsState>, action: any) => {
+    state.status = "succeeded"
+    state.product = action.payload
+}
+
 export const loadProducts = createAsyncThunk<any, void, { state: RootState }>("products/load", async (params, api) => {
     const {products: {limit}} = api.getState()
     const res = await fetch(`https://dummyjson.com/products?limit=${limit}`)
     return res.json()
 })
 
-export const loadProductsWithParameters = createAsyncThunk<any, ProductsParameters, { state: RootState }>("products/load/byCategory", async (params, api) => {
+export const loadProductsWithParameters = createAsyncThunk<any, ProductsParameters, {
+    state: RootState
+}>("products/load/byCategory", async (params, api) => {
 
     const {products: {limit}} = api.getState()
 
@@ -111,7 +116,9 @@ export const loadProductsWithParameters = createAsyncThunk<any, ProductsParamete
     return res.json()
 })
 
-export const loadProductById = createAsyncThunk<any, number, { state: RootState }>("products/load/byId", async (productId: number) => {
+export const loadProductById = createAsyncThunk<any, number, {
+    state: RootState
+}>("products/load/byId", async (productId: number) => {
     const res = await fetch(`https://dummyjson.com/products/${productId}`)
     return res.json()
 })

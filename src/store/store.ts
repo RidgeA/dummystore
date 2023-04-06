@@ -1,4 +1,5 @@
-import {combineReducers, configureStore, PreloadedState} from "@reduxjs/toolkit";
+import type {PreloadedState} from "@reduxjs/toolkit";
+import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {categoriesSlice} from "./categories.store";
 import {productsSlice} from "./products.store";
 
